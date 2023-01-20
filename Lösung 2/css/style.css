@@ -1,0 +1,154 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+
+:root{
+	--sidebar-color: #417C9A;
+	--main-color:;
+	--acent-color: #5A87A6;
+	--header-color: #F27340;
+	--aside-width: 347.7px;
+	--main-width: 966.4px;
+	--font-color: #fff;
+	--nav-hover-color:#7CACC2;
+	--polaroid-card-bg-color:#EBEBED;
+	
+}
+
+section{
+	padding-bottom: 10px;
+	margin-bottom: 20px;
+}
+
+.bgOverlay{
+	background-image:url(../img/backgroundOverlay.gif);
+	background-repeat: repeat;
+	background-color: gray;
+	background-color: rgba(0,0,0, 0.2);
+	
+}
+
+.flex{
+	display: flex;
+}
+
+#wrapper{
+	justify-content:center;
+	position:relative;
+}
+
+aside{
+	
+	background: linear-gradient(90deg,#387798  4%,#98ABB9 92%);
+	height: 100vh;
+	width: var(--aside-width);
+	color: var(--font-color);
+	position: sticky;
+	z-index:0;
+	display:block;
+	top:0;
+}
+nav{
+	margin-top: 300px;
+	position:sticky;
+}
+
+#navigation > *{
+	margin-bottom:10px;
+}
+
+#navigation{
+	margin-left:45px;
+	flex-direction:column;
+}
+
+
+#navigation a:link{
+	text-decoration: none;
+	color: var(--font-color);
+}
+#li:after{
+	content:url(../img/dreieck.gif);
+}
+
+#li:hover:after{}
+#navigation a, #navigation li{
+	padding: 6px;
+	color: var(--font-color);
+}
+#navigation a:hover:after, #navigation li:hover:after{
+	content: url(../img/dreieck.gif);
+	z-index: 2;
+	float: right;
+	margin-right:-6px;
+	height:15px;
+	
+	/* anchor tags anpassen das es nicht mehr hüpft und das dreieck originale 16px hat und nicht angepasste 15px*/
+}
+
+#navigation a:hover, #navigation li:hover{
+	background-color: var(--nav-hover-color);
+	text-decoration:underline;
+}
+
+ul li{
+	margin-left:20px;
+	margin-bottom: 10px;
+}
+	
+ul li::marker{
+	content:"▪  ";
+}
+
+#main-content{
+	width:var(--main-width);
+	background-color:white;
+}
+
+#main-content > div{
+	margin-top: 300px;
+	margin-left: 40px;
+}
+
+section h2{
+	color: var(--header-color);
+	margin-bottom: 5px;
+}
+
+
+#img-wrapper{
+	position: absolute;
+	width: 1311px;
+}
+
+
+#img-wrapper img{
+	position: absolute;
+	top: 0;
+	width: 100%;
+	max-width: calc(var(	--main-width)+var(--main-width));
+	z-index:1;
+}
+
+#img-wrapper p {
+	position:   absolute;
+	top: 10px;
+	right: 42px;
+	z-index: 2;
+	font-size: 30px;
+	color: #fff;
+}
+#content-wrapper{
+	border-inline: 2px solid #000;
+}
+
+.polaroid-card{
+	width:250px;
+	background-color:var(--polaroid-card-bg-color);
+	padding:4px 4px 4px 10px;
+}
+.polaroid-card > img{
+	align-items:center;
+	width:100%;
+}
